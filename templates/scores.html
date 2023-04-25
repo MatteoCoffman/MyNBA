@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Scores</title>
+</head>
+
+<body>
+    {% if scores %}
+    <h1>NBA Scores for {{scores[0]["Day"]}}</h1>
+    <table>
+        <tr>
+            <th>Home Team</th>
+            <th>Away Team</th>
+            <th>Home Score</th>
+            <th>Away Score</th>
+        </tr>
+        {% for game in scores %}
+        <tr>
+            <td>{{game["HomeTeam"]}}</td>
+            <td>{{game["AwayTeam"]}}</td>
+            <td>{{game["HomeTeamScore"]}}</td>
+            <td>{{game["AwayTeamScore"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h1>No NBA Scores available for the selected date.</h1>
+    {% endif %}
+    <a href="/">Back to homepage</a>
+</body>
+
+</html>
