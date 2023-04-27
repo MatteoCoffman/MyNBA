@@ -50,15 +50,41 @@ const Homepage = () => {
 
     return (
         <div>
-            <h1>MyNBA</h1>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="date"
-                    value={date}
-                    onChange={(e) => setDate(e.target.value)}
-                />
-                <button type="submit">Confirm</button>
-            </form>
+            <div className="header">
+                <h1>MyNBA</h1>
+            </div>
+            <div className="form-container">
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="date"
+                        value={date}
+                        onChange={(e) => setDate(e.target.value)}
+                    />
+                    <button type="submit">Confirm</button>
+                </form>
+                <div>
+                    <h2>In-Game Odds</h2>
+                    {inGameOdds.map((gameOdds, index) => {
+                        const odds = gameOdds.LiveOdds[0];
+                        if (!odds) return null;
+                        const { HomeMoneyLine, AwayMoneyLine, HomePointSpread, AwayPointSpread, OverUnder, OverPayout, UnderPayout } = odds;
+                        return (
+                            <div key={index} className="odds">
+                                <p>
+                                    {gameOdds.HomeTeamName} Money Line: {HomeMoneyLine} vs {gameOdds.AwayTeamName} Money Line: {AwayMoneyLine}
+                                </p>
+                                <p>
+                                    {gameOdds.HomeTeamName} Point Spread: {HomePointSpread} vs {gameOdds.AwayTeamName} Point Spread: {AwayPointSpread}
+                                </p>
+                                <p>Over/Under: {OverUnder}</p>
+                                <p>
+                                    Over Payout: {OverPayout} / Under Payout: {UnderPayout}
+                                </p>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
             <div className="scores-container">
                 <h2>Scores</h2>
                 {Array.isArray(scores) ? (
@@ -70,28 +96,6 @@ const Homepage = () => {
                 ) : (
                     <p>No scores available</p>
                 )}
-            </div>
-            <div>
-                <h2>In-Game Odds</h2>
-                {inGameOdds.map((gameOdds, index) => {
-                    const odds = gameOdds.LiveOdds[0];
-                    if (!odds) return null;
-                    const { HomeMoneyLine, AwayMoneyLine, HomePointSpread, AwayPointSpread, OverUnder, OverPayout, UnderPayout } = odds;
-                    return (
-                        <div key={index} className="odds">
-                            <p>
-                                {gameOdds.HomeTeamName} Money Line: {HomeMoneyLine} vs {gameOdds.AwayTeamName} Money Line: {AwayMoneyLine}
-                            </p>
-                            <p>
-                                {gameOdds.HomeTeamName} Point Spread: {HomePointSpread} vs {gameOdds.AwayTeamName} Point Spread: {AwayPointSpread}
-                            </p>
-                            <p>Over/Under: {OverUnder}</p>
-                            <p>
-                                Over Payout: {OverPayout} / Under Payout: {UnderPayout}
-                            </p>
-                        </div>
-                    );
-                })}
             </div>
             <div>
                 <h3>Best Bets</h3>
