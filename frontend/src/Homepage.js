@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import './Homepage.css';
+import axios from 'axios';
 
 const Homepage = () => {
     const [date, setDate] = useState('');
     const [scores, setScores] = useState([]);
     const [bestBets, setBestBets] = useState([]);
     const [inGameOdds, setInGameOdds] = useState([]);
+
+    useEffect(() => {
+        const fetchScores = async () => {
+            const response = await axios.get('/api/scores');
+            setScores(response.data);
+        };
+        fetchScores();
+    }, []);
 
     const fetchInGameOdds = async () => {
         const response = await fetch('/api/in-game-odds', {
@@ -36,34 +46,29 @@ const Homepage = () => {
         e.preventDefault();
         fetchInGameOdds();
         fetchBestBets();
-        try {
-            const response = await fetch('/api/scores', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ date })
-            });
-            const data = await response.json();
-            setScores(data);
-        } catch (error) {
-            console.error('Error fetching scores:', error);
-        }
     };
 
     return (
         <div>
+            <h1>NBA Scores</h1>
+            <ul>
+                {scores.map((score, index) => (
+                    <li key={index}>
+                        {score.AwayTeam} vs {score.HomeTeam}
+                    </li>
+                ))}
+            </ul>
             <form onSubmit={handleSubmit}>
                 <input
                     type="date"
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
                 />
-                <button type="submit">Get Scores</button>
+                <button type="submit">Confirm</button>
             </form>
-            <div>
+            <div className="scores-container">
                 {scores.map((score, index) => (
-                    <div key={index}>
+                    <div key={index} className="score">
                         {score.HomeTeam} {score.HomeTeamScore} vs {score.AwayTeam} {score.AwayTeamScore}
                     </div>
                 ))}
@@ -75,7 +80,7 @@ const Homepage = () => {
                     if (!odds) return null;
                     const { HomeMoneyLine, AwayMoneyLine, HomePointSpread, AwayPointSpread, OverUnder, OverPayout, UnderPayout } = odds;
                     return (
-                        <div key={index}>
+                        <div key={index} className="odds">
                             <p>
                                 {gameOdds.HomeTeamName} Money Line: {HomeMoneyLine} vs {gameOdds.AwayTeamName} Money Line: {AwayMoneyLine}
                             </p>
@@ -86,7 +91,6 @@ const Homepage = () => {
                             <p>
                                 Over Payout: {OverPayout} / Under Payout: {UnderPayout}
                             </p>
-
                         </div>
                     );
                 })}
