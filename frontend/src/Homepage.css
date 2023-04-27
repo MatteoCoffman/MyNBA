@@ -6,8 +6,26 @@
     background-color: #f9f9f9;
     border-left: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    margin-top: 106px;
 }
 
+form {
+    margin-top: 100px;
+}
+
+.form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
 .score {
     margin-bottom: 5px;
 }
@@ -22,4 +40,21 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+body {
+    background-image: url('Basketball.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.header {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 999;
 }
