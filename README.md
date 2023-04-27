@@ -1,13 +1,3 @@
-Postgres cluster nba-db created
-  Username:    postgres
-  Password:    TiaWBQwa5mKHzzX
-  Hostname:    nba-db.internal
-  Flycast:     fdaa:1:7ff0:0:1::b
-  Proxy port:  5432
-  Postgres port:  5433
-  Connection string: postgres://postgres:TiaWBQwa5mKHzzX@nba-db.flycast:5432
-
-
 # MyNBA | Final Project
 Link to GitHub Repository: https://github.com/MatteoCoffman/MyNBA.git
 
@@ -40,12 +30,12 @@ Matteo Coffman's Pull Request Links:
 1. First Pull: https://github.com/MatteoCoffman/MyNBA/pull/3
 2. Second Pull: https://github.com/MatteoCoffman/MyNBA/pull/4
 
-### Things we enjoyed and learned from this project
+## Things we enjoyed and learned from this project
 * We were able to properly use the git branch commands along with understanding how to use git pull properly
 * We enjoyed making the website as aesthetically pleasing pleasing as possible.
 * Learning the folder heirarchy for React and how to integrate it with non-React pages was difficult but interesting
 
-### Things we didn't enjoy and would like learned from this project
+## Things we didn't enjoy and would like learned from this project
 * We had an awful time trying to deploy our web to fly.io and maybe still be experiencing issues after the submission.
 * We would both love to learn React to properly use it and be able to use it to its fullest potential.
 * The sportsdata.io api that we used was in free trial mode, meaning that certain data was scrambled, like the scores and money line.
