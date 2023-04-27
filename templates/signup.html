@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href='/static/signup.css'>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Sign Up</h1>
+            <form action="/signup" method="post">
+                <input type="text" name="username" placeholder="Username">
+                <button type="submit" value="Signup">Sign Up</button>
+            </form>
+            <p class="signup-link">Already have an account? <a href="{{url_for('login_user')}}">Login</a></p>
+            <span class="error-message"> {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                {{ message }}
+                {% endfor %}
+                {% endif %}
+                {% endwith %}</span>
+        </div>
+    </div>
+</body>
+
+</html>
