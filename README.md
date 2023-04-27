@@ -17,7 +17,7 @@ https://docs.google.com/document/d/1FxNaUizafUC6KkXizUxKwcxnl0oaFSxJg6gfRxh4kvE/
 * React frontend: Use React frontend for the scores page, in-game odds, and best bets.
 
 ## “Stretch Features”
-* We did not add any stretch feature to our project.
+* We used React for the homepage of our website
 
 ## “Stretch Features”
 * We did not add any stretch feature to our project.
@@ -35,8 +35,10 @@ Matteo Coffman's Pull Request Links:
 ## Things we enjoyed and learned from this project
 * We were able to properly use the git branch commands along with understanding how to use git pull properly
 * We enjoyed making the website as aesthetically pleasing pleasing as possible.
+* Learning the folder heirarchy for React and how to integrate it with non-React pages was difficult but interesting
 
 ## Things we didn't enjoy and would like learned from this project
 * We had an awful time trying to deploy our web to fly.io and maybe still be experiencing issues after the submission.
 * We would both love to learn React to properly use it and be able to use it to its fullest potential.
-
+* The sportsdata.io api that we used was in free trial mode, meaning that certain data was scrambled, like the scores and money line.
+* In addition to the scrambled values, the api also would not allow us to view the Best Bets information in trial mode.
