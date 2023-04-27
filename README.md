@@ -1,6 +1,5 @@
-LINK TO GITHUB REPO: https://github.com/MatteoCoffman/MyNBA.git
-
 # MyNBA | Final Project
+Link to GitHub Repository: https://github.com/MatteoCoffman/MyNBA.git
 
 Our objective for this project is to create a website that allows users to sign up and log in to an NBA page. 
 Once logged in, they can view the scores of their favorite teams, the in-game odds, and the best bets provided in real time.
@@ -21,7 +20,7 @@ https://docs.google.com/document/d/1FxNaUizafUC6KkXizUxKwcxnl0oaFSxJg6gfRxh4kvE/
 * We did not add any stretch feature to our project.
 
 
-#### List of links to pull request:
+## List of links to pull request:
 Samir Cortez's Pull Request Links:
 
 1. First Pull: https://github.com/MatteoCoffman/MyNBA/pull/1
