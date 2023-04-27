@@ -10,31 +10,33 @@ The API we will be utilizing is free, but it may not provide accurate scores sin
 https://docs.google.com/document/d/1FxNaUizafUC6KkXizUxKwcxnl0oaFSxJg6gfRxh4kvE/edit?usp=sharing
 
 
-### “Technical Requirements”
+## “Technical Requirements”
+* App runs on Flask server written in Python
+* Postgres Database used to persist data, in this case, used to save user's login in the database and check if they are in the database.
+* User login: A simple login and signup page that allows users to sign up and log in to our page.
+* Beautification: We tried making each page as appealing as possible while trying to make each page user-friendly.
+* React frontend: Use React frontend for the scores page, in-game odds, and best bets.
 
+## “Stretch Features”
+* We did not add any stretch feature to our project.
 
-
-
-THIS IS WHAT WE NEED IN OUR README
-
-
-
-
-fly.io deployment link is included in README
-2+ examples of things you enjoyed about or learned from this project
-2+ examples of things you didn’t enjoy or wanted to learn from this project
-List your 4 Technical Requirements in your README under a section called “Technical Requirements”
-List any stretch features you undertook in your README under a section called “Stretch Features”. You must also include your verification for your feature. (Leave empty if you did not complete any stretch features.)
 
 #### List of links to pull request:
-
 Samir Cortez's Pull Request Links:
 
-1. https://github.com/MatteoCoffman/MyNBA/pull/1
-2. https://github.com/MatteoCoffman/MyNBA/pull/2
+1. First Pull: https://github.com/MatteoCoffman/MyNBA/pull/1
+2. Second Pull: https://github.com/MatteoCoffman/MyNBA/pull/2
 
 Matteo Coffman's Pull Request Links:
+1. First Pull: https://github.com/MatteoCoffman/MyNBA/pull/3
+2. Second Pull: Missing link here
 
-1. https://github.com/MatteoCoffman/MyNBA/pull/3
-2. Missing link here
+### Things we enjoyed and learned from this project
+* We were able to properly use the git branch commands along with understanding how to use git pull properly
+* We enjoyed making the website as aesthetically pleasing pleasing as possible.
+
+### Things we didn't enjoy and would like learned from this project
+* We had an awful time trying to deploy our web to fly.io and maybe still be experiencing issues after the submission.
+* We would both love to learn React to properly use it and be able to use it to its fullest potential.
+
 
