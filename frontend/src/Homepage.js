@@ -10,11 +10,11 @@ const Homepage = () => {
 
     useEffect(() => {
         const fetchScores = async () => {
-            const response = await axios.get('/api/scores');
+            const response = await axios.post('/api/scores', { date });
             setScores(response.data);
         };
         fetchScores();
-    }, []);
+    }, [date]);
 
     const fetchInGameOdds = async () => {
         const response = await fetch('/api/in-game-odds', {
@@ -50,14 +50,7 @@ const Homepage = () => {
 
     return (
         <div>
-            <h1>NBA Scores</h1>
-            <ul>
-                {scores.map((score, index) => (
-                    <li key={index}>
-                        {score.AwayTeam} vs {score.HomeTeam}
-                    </li>
-                ))}
-            </ul>
+            <h1>MyNBA</h1>
             <form onSubmit={handleSubmit}>
                 <input
                     type="date"
@@ -67,6 +60,7 @@ const Homepage = () => {
                 <button type="submit">Confirm</button>
             </form>
             <div className="scores-container">
+                <h2>Scores</h2>
                 {scores.map((score, index) => (
                     <div key={index} className="score">
                         {score.HomeTeam} {score.HomeTeamScore} vs {score.AwayTeam} {score.AwayTeamScore}
