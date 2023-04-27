@@ -28,12 +28,12 @@ Samir Cortez's Pull Request Links:
 
 Matteo Coffman's Pull Request Links:
 1. First Pull: https://github.com/MatteoCoffman/MyNBA/pull/3
-2. Second Pull: Missing link here
+2. Second Pull: https://github.com/MatteoCoffman/MyNBA/pull/4
 
-### Things we enjoyed and learned from this project
+## Things we enjoyed and learned from this project
 * We were able to properly use the git branch commands along with understanding how to use git pull properly
 * We enjoyed making the website as aesthetically pleasing pleasing as possible.
 
-### Things we didn't enjoy and would like learned from this project
+## Things we didn't enjoy and would like learned from this project
 * We had an awful time trying to deploy our web to fly.io and maybe still be experiencing issues after the submission.
 * We would both love to learn React to properly use it and be able to use it to its fullest potential.
