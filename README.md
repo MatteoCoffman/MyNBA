@@ -1,5 +1,6 @@
-# MyNBA | Final Project
 Link to GitHub Repository: https://github.com/MatteoCoffman/MyNBA.git
+
+# MyNBA | Final Project
 
 Our objective for this project is to create a website that allows users to sign up and log in to an NBA page. 
 Once logged in, they can view the scores of their favorite teams, the in-game odds, and the best bets provided in real time.
