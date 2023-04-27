@@ -4,6 +4,7 @@ import json
 import requests
 from dotenv import load_dotenv, find_dotenv
 from flask_sqlalchemy import SQLAlchemy
+from flask import redirect
 
 
 load_dotenv(find_dotenv())
@@ -41,12 +42,13 @@ def login_user():
         login_username = form_data_login["username"]
         if check_username(login_username):
             flask.session["username"] = login_username
-            return flask.redirect(flask.url_for("get_scores"))
+            return flask.redirect("http://localhost:3000/")
         else:
             flask.flash("User not found")
             return flask.render_template("login.html")
     else:
         return flask.render_template("login.html")
+
 
 
 def check_username(username):

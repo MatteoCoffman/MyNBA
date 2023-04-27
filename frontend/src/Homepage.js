@@ -61,11 +61,15 @@ const Homepage = () => {
             </form>
             <div className="scores-container">
                 <h2>Scores</h2>
-                {scores.map((score, index) => (
-                    <div key={index} className="score">
-                        {score.HomeTeam} {score.HomeTeamScore} vs {score.AwayTeam} {score.AwayTeamScore}
-                    </div>
-                ))}
+                {Array.isArray(scores) ? (
+                    scores.map((score, index) => (
+                        <div key={index} className="score">
+                            {score.HomeTeam} {score.HomeTeamScore} vs {score.AwayTeam} {score.AwayTeamScore}
+                        </div>
+                    ))
+                ) : (
+                    <p>No scores available</p>
+                )}
             </div>
             <div>
                 <h2>In-Game Odds</h2>
