@@ -39,7 +39,5 @@ Matteo Coffman's Pull Request Links:
 * Learning the folder heirarchy for React and how to integrate it with non-React pages was difficult but interesting
 
 ## Things we didn't enjoy and would like learned from this project
-* We had an awful time trying to deploy our web to fly.io and maybe still be experiencing issues after the submission.
-* We would both love to learn React to properly use it and be able to use it to its fullest potential.
 * The sportsdata.io api that we used was in free trial mode, meaning that certain data was scrambled, like the scores and money line.
 * In addition to the scrambled values, the api also would not allow us to view the Best Bets information in trial mode.
